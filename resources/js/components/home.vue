@@ -4,7 +4,7 @@
             align="center"
             justify="space-around"
         >
-            <v-btn> จัดรายการสินค้า </v-btn>
+            <v-btn @click="redirect('/product')"> จัดรายการสินค้า </v-btn>
             <v-btn color="primary">
             Primary
             </v-btn>
@@ -24,6 +24,9 @@
             console.log('Initialized.')
         },
         methods:{
+            redirect(url){
+                window.location.href = url
+            },
             initialize(){   
               
             },
