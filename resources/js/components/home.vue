@@ -1,23 +1,32 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Home</div>
-
-                    <div class="card-body">
-                        Home.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <v-app>
+        <v-row
+            align="center"
+            justify="space-around"
+        >
+            <v-btn> จัดรายการสินค้า </v-btn>
+            <v-btn color="primary">
+            Primary
+            </v-btn>
+        </v-row>
+    </v-app>
 </template>
 
 <script>
     export default {
+        data() {
+            return{
+               
+            }
+        },    
         mounted() {
-            console.log('Component mounted.')
+            this.initialize()
+            console.log('Initialized.')
+        },
+        methods:{
+            initialize(){   
+              
+            },
         }
     }
 </script>

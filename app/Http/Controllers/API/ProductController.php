@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
 class ProductController extends Controller
 {
-    /**
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -15,8 +16,12 @@ class ProductController extends Controller
     public function index()
     {
         //
+        $product = Product::all();
 
-        return Product::all();
+        return response()->json([
+            'success' => true, 
+            'Product' => $product
+        ]);
     }
 
     /**
